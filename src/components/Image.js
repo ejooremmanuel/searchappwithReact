@@ -1,17 +1,11 @@
 import React from "react";
-import { Image, Grid } from "semantic-ui-react";
-// import { Container } from "@material-ui/core";
+import "./Image.css";
 
-const ImageCard = ({ image }) => {
-  return image.map((unitimage) => (
-    <Grid rows="three" divided>
-      <Grid.Column>
-        <Grid.Row>
-          <Image src={unitimage.urls.small} alt="" size="medium" bordered />
-        </Grid.Row>
-      </Grid.Column>
-    </Grid>
-  ));
+const ImageCard = ({ images }) => {
+  const newimages = images.map(({ urls, id, description }, i) => {
+    return <img key={id} src={urls.full} alt={description} />;
+  });
+  return <div className="image">{newimages}</div>;
 };
 
 export default ImageCard;

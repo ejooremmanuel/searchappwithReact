@@ -29,7 +29,7 @@ export default class SearchBar extends Component {
           }}
           onget={this.onSearchHandle}
         />
-        <ImageCard image={this.state.images} />
+        <ImageCard images={this.state.images} />
       </div>
     );
   }
