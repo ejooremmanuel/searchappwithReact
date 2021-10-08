@@ -1,6 +1,7 @@
 import React, { Component } from "react";
 import Input from "./Input";
 import axios from "axios";
+import ImageCard from "./Image";
 export default class SearchBar extends Component {
   state = { term: null, images: [] };
 
@@ -15,7 +16,7 @@ export default class SearchBar extends Component {
       }
     );
     const data = get.data.results;
-    data.map((url) => this.setState({ images: url.urls.small }));
+    this.setState({ images: data });
   };
 
   render() {
@@ -28,10 +29,7 @@ export default class SearchBar extends Component {
           }}
           onget={this.onSearchHandle}
         />
-        <img src={this.state.images} alt="" />
-        <img src={this.state.images[1]} alt="" />
-        <img src={this.state.images[0]} alt="" />
-        <img src={this.state.images[3]} alt="" />
+        <ImageCard image={this.state.images} />
       </div>
     );
   }
