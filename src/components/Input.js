@@ -46,7 +46,7 @@ export default function Input({ onChange, value, onget }) {
       <InputBase
         className={classes.input}
         placeholder="Type your searh term here..."
-        inputProps={{ "aria-label": "Type your searh term here..." }}
+        inputProps={{ "aria-label": "Type your search term here..." }}
         onChange={onChange}
       />
       <IconButton
