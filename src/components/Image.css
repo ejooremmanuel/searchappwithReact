@@ -1,7 +1,7 @@
 .image {
   display: grid;
   grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
-  grid-gap: 10px;
+  grid-gap: 1px;
   margin: 0 auto;
   width: 60vw;
 }

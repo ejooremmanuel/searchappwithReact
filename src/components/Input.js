@@ -43,6 +43,7 @@ export default function Input({ onChange, value, onget }) {
       <IconButton className={classes.iconButton} aria-label="menu">
         <MenuIcon />
       </IconButton>
+      <label>Search for any image of your choice..</label>
       <InputBase
         className={classes.input}
         placeholder="Type your searh term here..."
